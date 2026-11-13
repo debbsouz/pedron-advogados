@@ -1,0 +1,8 @@
+# Robots — PEDRON ADVOGADOS
+# PENDÊNCIA: substituir o domínio abaixo pelo domínio oficial do escritório.
+
+User-agent: *
+Allow: /
+Disallow: /404
+
+Sitemap: https://www.pedronadvogados.com.br/sitemap.xml

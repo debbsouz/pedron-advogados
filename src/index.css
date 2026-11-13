@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   TEMA — IDENTIDADE VISUAL PEDRON ADVOGADOS
+   Preto (principal), dourado (destaque) e branco/creme (contraste).
+   ========================================================================== */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, 'Times New Roman', serif;
+
+  /* Preto institucional */
+  --color-ink-950: #080808;
+  --color-ink-900: #0d0d0d;
+  --color-ink-800: #141414;
+  --color-ink-700: #1c1c1c;
+  --color-ink-600: #262626;
+  --color-ink-500: #3a3a3a;
+
+  /* Dourado de destaque (antique gold) */
+  --color-gold-700: #9c7c39;
+  --color-gold-600: #b08d47;
+  --color-gold-500: #c6a15b;
+  --color-gold-400: #d4b477;
+  --color-gold-300: #e2cb9c;
+  --color-gold-100: #f2e8d4;
+
+  /* Creme / branco quente */
+  --color-cream-50: #faf8f5;
+  --color-cream-100: #f6f2ec;
+  --color-cream-200: #efe9e0;
+  --color-cream-300: #e3dacd;
+  --color-cream-400: #d2c6b5;
+
+  --color-muted: #7c7568;
+
+  /* Escala tipográfica editorial */
+  --text-display: clamp(2.75rem, 6.5vw, 5.5rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-headline: clamp(2rem, 4vw, 3.25rem);
+  --text-headline--line-height: 1.1;
+  --text-headline--letter-spacing: -0.015em;
+
+  /* Curvas de animação */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-cream-100);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+
+  /* Foco visível e acessível */
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-500);
+    color: var(--color-ink-950);
+  }
+
+  /* Compensação do header fixo ao navegar por âncoras */
+  [id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   UTILITÁRIOS
+   ========================================================================== */
+@layer utilities {
+  .container-x {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-x {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-x {
+      padding-inline: 4rem;
+    }
+  }
+
+  /* Filete dourado decorativo */
+  .rule-gold {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-gold-500),
+      color-mix(in srgb, var(--color-gold-500) 15%, transparent)
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Animação de revelação ao entrar no viewport */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition:
+      opacity 0.9s var(--ease-out-soft),
+      transform 0.9s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Textura sutil de fundo escuro */
+  .bg-grain {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in srgb, var(--color-gold-500) 18%, transparent) 1px,
+      transparent 0
+    );
+    background-size: 22px 22px;
+  }
+}
+
+/* ==========================================================================
+   CONTEÚDO EDITORIAL DAS PÁGINAS INSTITUCIONAIS
+   ========================================================================== */
+@layer components {
+  .legal-prose {
+    color: var(--color-ink-600);
+    font-size: 0.975rem;
+    line-height: 1.85;
+  }
+
+  .legal-prose > * + * {
+    margin-top: 1.25rem;
+  }
+
+  .legal-prose h2 {
+    margin-top: 3rem;
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    line-height: 1.25;
+    color: var(--color-ink-900);
+  }
+
+  .legal-prose h3 {
+    margin-top: 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-gold-700);
+  }
+
+  .legal-prose ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .legal-prose li {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .legal-prose li + li {
+    margin-top: 0.65rem;
+  }
+
+  .legal-prose li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 0.65rem;
+    height: 1px;
+    background-color: var(--color-gold-500);
+  }
+
+  .legal-prose a {
+    color: var(--color-gold-700);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

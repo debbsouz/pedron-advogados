@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PEDRON ADVOGADOS">
+  <rect width="64" height="64" fill="#0a0a0a"/>
+  <path d="M32 8 52 15.5v15.9c0 10.9-7.7 19.5-20 24.6-12.3-5.1-20-13.7-20-24.6V15.5L32 8Z" fill="none" stroke="#c6a15b" stroke-width="1.6"/>
+  <text x="32" y="41" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="500" fill="#c6a15b">P</text>
+</svg>

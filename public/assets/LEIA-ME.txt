@@ -1,0 +1,58 @@
+PEDRON ADVOGADOS — PASTA DE ASSETS
+==================================
+
+Esta pasta concentra os arquivos visuais oficiais do site.
+
+IMPORTANTE: nenhuma imagem oficial foi recebida até o momento. Por isso o site
+exibe marcadores discretos de pendência ("Imagem pendente"). Basta inserir os
+arquivos com os nomes abaixo e eles passam a ser exibidos automaticamente —
+não é preciso alterar código, apenas os caminhos em src/config/site.ts caso
+opte por outros nomes.
+
+ESTRUTURA DE PASTAS
+-------------------
+
+  public/assets/logo/           Logotipo oficial
+  public/assets/cidreira/       Fotografias da unidade de Cidreira
+  public/assets/magisterio/     Fotografias da unidade de Magistério
+  public/assets/institucional/  Hero, imagens institucionais e fotos aéreas
+  public/assets/equipe/         Retratos dos profissionais
+
+ARQUIVOS ESPERADOS
+------------------
+
+1) LOGOTIPO — public/assets/logo/
+   - logo-pedron.png         versão principal (para fundos claros)
+   - logo-pedron-clara.png   versão clara/monocromática (para fundos escuros)
+   Preserve proporção e não distorça a marca.
+
+2) UNIDADE CIDREIRA — public/assets/cidreira/
+   - escritorio-cidreira-01.jpg
+   - escritorio-cidreira-02.jpg
+
+3) UNIDADE MAGISTÉRIO (BALNEÁRIO PINHAL) — public/assets/magisterio/
+   - escritorio-magisterio-01.jpg
+   - escritorio-magisterio-02.jpg
+   As fotografias das duas unidades NÃO devem ser misturadas.
+
+4) INSTITUCIONAL — public/assets/institucional/
+   - hero-juridico.jpg                (capa do Hero — tema jurídico, sem identidade de unidade)
+   - escritorio-institucional-01.jpg  (seção "O Escritório")
+   - escritorio-institucional-02.jpg  (seção "O Escritório")
+   - cidade-aerea-cidreira.jpg        (registro aéreo da região)
+   - cidade-aerea-magisterio.jpg      (registro aéreo da região)
+   As fotografias aéreas são ilustrativas e NÃO substituem as fotos das unidades.
+
+5) EQUIPE — public/assets/equipe/    (retratos individuais, proporção 3:4)
+   - alexandro-pedron.jpg
+   - taiane-pedron.jpg
+
+6) COMPARTILHAMENTO (Open Graph) — public/assets/
+   - og-image.jpg                     (1200 x 630 px) — atualizar em index.html
+
+RECOMENDAÇÕES TÉCNICAS
+----------------------
+- Formato: JPG ou WebP para fotografias; PNG/SVG para o logotipo.
+- Peso: até ~300 KB por fotografia (evita impacto nos Core Web Vitals).
+- Largura sugerida: 1920 px para imagens de capa; 1200 px para imagens de apoio.
+- Preserve a qualidade, as proporções e a aparência original das fotografias.

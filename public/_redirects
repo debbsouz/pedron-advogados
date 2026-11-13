@@ -1,0 +1,3 @@
+# Redirecionamento para SPA (Netlify / Cloudflare Pages)
+# Garante que rotas internas como /politica-de-privacidade funcionem no acesso direto.
+/*    /index.html   200

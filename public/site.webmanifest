@@ -1,0 +1,18 @@
+{
+  "name": "PEDRON ADVOGADOS",
+  "short_name": "Pedron",
+  "description": "Site institucional do escritório PEDRON ADVOGADOS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
