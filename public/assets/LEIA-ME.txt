@@ -3,11 +3,11 @@ PEDRON ADVOGADOS — PASTA DE ASSETS
 
 Esta pasta concentra os arquivos visuais oficiais do site.
 
-IMPORTANTE: nenhuma imagem oficial foi recebida até o momento. Por isso o site
-exibe marcadores discretos de pendência ("Imagem pendente"). Basta inserir os
-arquivos com os nomes abaixo e eles passam a ser exibidos automaticamente —
-não é preciso alterar código, apenas os caminhos em src/config/site.ts caso
-opte por outros nomes.
+O logotipo oficial já foi inserido (ver item 1). As demais fotografias ainda não
+foram recebidas; por isso o site exibe marcadores discretos de pendência
+("Imagem pendente"). Basta inserir os arquivos com os nomes abaixo e eles passam
+a ser exibidos automaticamente — não é preciso alterar código, apenas os
+caminhos em src/config/site.ts caso opte por outros nomes.
 
 ESTRUTURA DE PASTAS
 -------------------
@@ -22,8 +22,8 @@ ARQUIVOS ESPERADOS
 ------------------
 
 1) LOGOTIPO — public/assets/logo/
-   - logo-pedron.png         versão principal (para fundos claros)
-   - logo-pedron-clara.png   versão clara/monocromática (para fundos escuros)
+   - Pedron-logo.png         versão principal (preta + dourada, para fundos claros)
+   - logo-pedron-clara.png   versão clara (creme + dourada, para fundos escuros)
    Preserve proporção e não distorça a marca.
 
 2) UNIDADE CIDREIRA — public/assets/cidreira/

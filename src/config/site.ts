@@ -77,9 +77,9 @@ export const site = {
  * exibe automaticamente um lockup tipográfico provisório (sem quebrar a página).
  */
 export const logo = {
-  /** Versão principal, para fundos claros. */
-  src: '/assets/logo/logo-pedron.png',
-  /** Versão clara/monocromática, para fundos escuros. */
+  /** Versão principal (preta + dourada), para fundos claros. */
+  src: '/assets/logo/Pedron-logo.png',
+  /** Versão clara (creme + dourada), para fundos escuros. */
   srcLight: '/assets/logo/logo-pedron-clara.png',
   alt: 'PEDRON ADVOGADOS',
 } as const
